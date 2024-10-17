@@ -1,5 +1,1 @@
-Olá, Mundo.
-
-Olá, Ead.
-
-Olá, Aluno.
+Arroz, Feijão, Macarrão
