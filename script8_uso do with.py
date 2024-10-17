@@ -9,3 +9,4 @@ with open("dados.txt", "r", encoding='utf-8') as arquivo:
         print(linha, end='')  # O parâmetro end='' evita a quebra de linha adicional
     # Após ler todo o arquivo, imprime uma mensagem indicando que a leitura foi concluída
     print("\nFim do arquivo:", arquivo.name)  # Mostra o nome do arquivo lido
+#Fim
