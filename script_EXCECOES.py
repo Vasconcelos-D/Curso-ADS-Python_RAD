@@ -17,8 +17,8 @@ print("Termino do programa")
 '''
 try:
     
-    #os.mkdir("meu_diretorio") para adicionar o diretorio usa-se MKDIR
-    os.rmdir("meu_diretorio") # para remover usa-se RMDIR
+    os.mkdir("meu_diretorio") #para adicionar o diretorio usa-se MKDIR
+   #os.rmdir("meu_diretorio") # para remover usa-se RMDIR
     print("Diretório criado!")
 except PermissionError as erro:
     print("Sem permissão para criar diretório")
