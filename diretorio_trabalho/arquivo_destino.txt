@@ -1,0 +1,4 @@
+Cabeçalho: Conteúdo do Arquivo
+A CASA Ã‰ AZUL
+O CACHORRO Ã‰ MARROM
+O CARRO Ã‰ PRETO
