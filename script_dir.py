@@ -2,7 +2,7 @@ import os
 
 def processar_arquivo(arquivo_origem, arquivo_destino):
        try:
-           with open(arquivo_origem, 'r') as f_origem:
+           with open(arquivo_origem, 'r' ) as f_origem:
                conteudo = f_origem.read()
        except FileNotFoundError:
            print(f"Arquivo {arquivo_origem} não encontrado.")
@@ -15,7 +15,7 @@ def processar_arquivo(arquivo_origem, arquivo_destino):
            return
  
        try:
-           with open(arquivo_destino, 'w') as f_destino:
+           with open(arquivo_destino, 'w' ) as f_destino:
                f_destino.write("Cabeçalho: Conteúdo do Arquivo\n")
                f_destino.write(conteudo)
                print(f"Conteúdo escrito em {arquivo_destino}.")
