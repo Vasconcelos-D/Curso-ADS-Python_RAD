@@ -32,12 +32,16 @@
 # # Executa o loop principal da interface gráfica para manter a janela aberta
 # janela.mainloop()  # Mantém a janela aberta e em execução até que seja fechada pelo usuário
 
+#Widget Button
+
 # import tkinter as tk
 # def mostrar_nomes():
 #    print("Nome: %s\nSobrenome: %s" % (e1.get(), e2.get()))
 # janela = tk.Tk()
 # janela.title("Aplicação GUI com o Widget Entry")
 # tk.Label(janela,text="Nome").grid(row=0)
+
+#Widget Entry
 
 # tk.Label(janela,text="Sobrenome").grid(row=1)
 # e1 = tk.Entry(janela)
@@ -47,10 +51,37 @@
 # tk.Button(janela, text='Sair',command=janela.quit).grid(row=3,column=0,sticky=tk.W,pady=4)
 # tk.Button(janela, text='Exibir Dados', command=mostrar_nomes).grid(row=3,column=1,sticky=tk.W,pady=4)
 # tk.mainloop()
+
+
+#Widget Radiobutton
+
+# import tkinter as tk
+# janela = tk.Tk()
+# v = tk.IntVar()
+# tk.Label(janela,text="""Escolha uma linguagem de programação:""",justify = tk.LEFT, padx = 20).pack()
+# tk.Radiobutton(janela,text="python",padx = 25,variable=v,value=1).pack(anchor=tk.W)
+# tk.Radiobutton(janela,text="C++",padx = 25,variable=v,value=2).pack(anchor=tk.W)
+# janela.mainloop()
+
+#Widget Checkbox
+
+# import tkinter as tk
+# from tkinter import ttk
+# janela = tk.Tk()
+# def escolha_carreira():
+#    print("Gerencial: %d,\nTécnica : %d" % (var1.get(), var2.get()))
+# ttk.Label(janela, text="Escolha sua vocação:").grid(row=0, sticky=tk.W)
+# var1 = tk.IntVar()
+# ttk.Checkbutton(janela, text="Gerencial", variable=var1).grid(row=1, sticky=tk.W)
+# var2 = tk.IntVar()
+# ttk.Checkbutton(janela, text="Técnica", variable=var2).grid(row=2, sticky=tk.W)
+# ttk.Button(janela, text='Sair', command=janela.quit).grid(row=3, sticky=tk.W, pady=4)
+# ttk.Button(janela, text='Mostrar', command=escolha_carreira).grid(row=4, sticky=tk.W, pady=4)
+# janela.mainloop()
+
 import tkinter as tk
 janela = tk.Tk()
-v = tk.IntVar()
-tk.Label(janela,text="""Escolha uma linguagem de programação:""",justify = tk.LEFT, padx = 20).pack()
-tk.Radiobutton(janela,text="python",padx = 25,variable=v,value=1).pack(anchor=tk.W)
-tk.Radiobutton(janela,text="C++",padx = 25,variable=v,value=2).pack(anchor=tk.W)
-janela.mainloop()
+T = tk.Text(janela, height=2, width=30)
+T.pack()
+T.insert(tk.END, "Este é um texto\ncom duas linhas\n")
+tk.mainloop()
