@@ -1,10 +1,17 @@
-#Primeiro contato com inteface Grafica 
-
-import tkinter as tk #importanto a Biblioteca
-from tkinter import ttk
-janela = tk.Tk() #Criado instância da classe TK no objeto janela.
-janela.title("Aplicação GUI com Widget Label") #Uso do methodo title para definir um titulo.
-#janela.resizable(False, False) Deixar o tamanho fixo da janela...
-ttk.Label(janela, text= "Componete Label").grid(column=0, row=0)
-janela.mainloop() #Evento iniciar um loop
-
+import tkinter as tk
+contador = 0
+def contador_label(lblRotulo):
+   def funcao_contar():
+      global contador
+      contador = contador + 1
+      lblRotulo.config(text=str(contador))
+      lblRotulo.after(1000, funcao_contar)
+      funcao_contar()
+janela = tk.Tk()
+janela.title("Contagem dos Segundos")
+lblRotulo = tk.Label(janela, fg="green")
+lblRotulo.pack()
+contador_label(lblRotulo)
+btnAcao = tk.Button(janela, text='Clique aqui para Interromper a contagem', width=50, command=janela.destroy)
+btnAcao.pack()
+janela.mainloop()
