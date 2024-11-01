@@ -88,10 +88,58 @@
 # T.insert(tk.END, "Este é um texto\ncom duas linhas\n")
 # tk.mainloop()
 
+
+#WIDGET MESAGEM
+# import tkinter as tk
+# janela = tk.Tk()
+# mensagem_para_usuario = "Esta é uma mensagem.\n(Pode ser bastante útil para o usuário)"
+# msg = tk.Message(janela, text = mensagem_para_usuario)
+# msg.config(bg='lightgreen', font=('times', 24, 'italic'))
+# msg.pack()
+# janela.mainloop()
+
+# Widget Slider
+# import tkinter as tk
+# from tkinter import ttk
+# def mostrar_valores():
+#    print (w1.get(), w2.get())
+# janela = tk.Tk()
+# w1 = ttk.Scale(janela, from_=0, to=50)
+# w1.pack()
+# w2 = ttk.Scale(janela, from_=0, to=100, orient=tk.HORIZONTAL)
+# w2.pack()
+# ttk.Button(janela, text='Mostrar a Escala', command=mostrar_valores).pack()
+# janela.mainloop()
+
+# #Widgete DIALOG
+# import tkinter as tk
+# from tkinter import messagebox as mb
+# def resposta():
+#    mb.showerror("Resposta", "Desculpe, nenhuma resposta disponível!")
+# def verificacao():
+#    if mb.askyesno('Verificar', 'Realmente quer sair?'):
+#       mb.showwarning('Yes', 'Ainda não foi implementado')
+#    else:
+#       mb.showinfo('No', 'A opção de Sair foi cancelada')
+# tk.Button(text='Sair', command=verificacao).pack(fill=tk.X)
+# tk.Button(text='Resposta', command=resposta).pack(fill=tk.X)
+# tk.mainloop()
+
 import tkinter as tk
+from tkinter import ttk
+# Criação de uma janela tkinter
 janela = tk.Tk()
-mensagem_para_usuario = "Esta é uma mensagem.\n(Pode ser bastante útil para o usuário)"
-msg = tk.Message(janela, text = mensagem_para_usuario)
-msg.config(bg='lightgreen', font=('times', 24, 'italic'))
-msg.pack()
+janela.title('Combobox')
+janela.geometry('500x250')
+# Componente Label
+ttk.Label(janela, text = "Combobox Widget",background = 'green', foreground ="white",font = ("Times New Roman", 15)).grid(row = 0, column = 1)
+# Componente Label
+ttk.Label(janela, text = "Selecione um mês :",font = ("Times New Roman", 10)).grid(column = 0,row = 5, padx = 10, pady = 25)
+# Componente Combobox
+n = tk.StringVar()
+escolha = ttk.Combobox(janela, width = 27, textvariable = n)
+# Adição de itens no Combobox
+escolha['values'] = (' Janeiro',' Fevereiro',' Março',' Abril',' Maio',' Junho',' Julho',' Agosto',' Setembro',' Outubro',' Novembro',' Dezembro')
+escolha.grid(column = 1, row = 5)
+escolha.current()
 janela.mainloop()
