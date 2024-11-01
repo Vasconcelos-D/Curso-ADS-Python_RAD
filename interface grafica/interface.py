@@ -79,9 +79,19 @@
 # ttk.Button(janela, text='Mostrar', command=escolha_carreira).grid(row=4, sticky=tk.W, pady=4)
 # janela.mainloop()
 
+# Widget Text
+
+# import tkinter as tk
+# janela = tk.Tk()
+# T = tk.Text(janela, height=2, width=30)
+# T.pack()
+# T.insert(tk.END, "Este é um texto\ncom duas linhas\n")
+# tk.mainloop()
+
 import tkinter as tk
 janela = tk.Tk()
-T = tk.Text(janela, height=2, width=30)
-T.pack()
-T.insert(tk.END, "Este é um texto\ncom duas linhas\n")
-tk.mainloop()
+mensagem_para_usuario = "Esta é uma mensagem.\n(Pode ser bastante útil para o usuário)"
+msg = tk.Message(janela, text = mensagem_para_usuario)
+msg.config(bg='lightgreen', font=('times', 24, 'italic'))
+msg.pack()
+janela.mainloop()
